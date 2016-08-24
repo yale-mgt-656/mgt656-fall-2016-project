@@ -312,7 +312,7 @@ describe('The new event creation page',function(){
 
   it('should have the appropriate options for select elements', function () {
       var requiredFieldValues = {
-        'year' : [2015, 2016],
+        'year' : [2016, 2017],
         'month' : _.range(12),
         'hour' : _.range(24),
         'minute' : [0, 30]
@@ -370,7 +370,7 @@ describe('The form for creating new events',function(){
       return {
         title: 'Test event' + getRandomInt(0, 10000),
         location: 'Caseus',
-        year: 2015,
+        year: 2016,
         month: 6,
         day: 1,
         hour: 4,
@@ -421,8 +421,8 @@ describe('The form for creating new events',function(){
   var rangedIntCases = [
     {
       field: 'year',
-      min: 2015,
-      max: 2016
+      min: 2016,
+      max: 2017
     },
     {
       field: 'month',
