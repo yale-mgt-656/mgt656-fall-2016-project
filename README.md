@@ -1,18 +1,18 @@
 # MGT 645 Project
 
 This is the starter project for MGT 645. You'll fork this
-code in order to get started with your project. 
+code in order to get started with your project.
 
 ## Getting started
 
 For the following instructions, we assume that you are logged
-into the virtual machine you are using for MGT 645. 
+into the virtual machine you are using for MGT 645.
 
 To clone the repository, issue you'll use the following git command.
 
-	git clone https://github.com/yale-mgt-656/mgt656-spring-2015-project.git
+	git clone https://github.com/yale-mgt-656/mgt656-fall-2016-project.git
 
-Then, you can do 
+Then, you can do
 
 	cd mgt656-project
 
@@ -46,7 +46,7 @@ That will run all the tests in `test/tests.js`.
 This application relies on a number of open source projects.
 Obviously, it is a [node.js](http://nodejs.org/) application.
 We are using the following components, which are built for node
-applications and written by people that have made them open 
+applications and written by people that have made them open
 source.
 
 * [express.js](http://expressjs.com/): Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
