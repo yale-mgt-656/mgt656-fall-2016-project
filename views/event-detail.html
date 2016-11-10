@@ -7,4 +7,11 @@
   <div>Attendees: {{event.attending}}</div>
   <div><img src={{event.image}}></img></div>
   
+   <form method="POST">
+    <label for="email">RSVP:</label>
+    <input type="text" name="email" id="RSVP email">
+    <input type="submit">
+  </form>
+
+
 {% endblock %}

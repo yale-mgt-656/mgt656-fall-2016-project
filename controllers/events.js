@@ -60,6 +60,10 @@ function saveEvent(request, response){
   if (validator.isLength(request.body.title, 5, 50) === false) {
     contextData.errors.push('Your title should be between 5 and 100 letters.');
   }
+  
+    if (validator.contains(request.body.email, "@yale.edu") === false) {
+    contextData.errors.push('Your email address must be a valid Yale email');
+  }
 
 
   if (contextData.errors.length === 0) {
