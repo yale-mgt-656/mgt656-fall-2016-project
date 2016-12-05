@@ -18,6 +18,17 @@ var HOST;
 var PORT;
 var SITE;
 
+
+function generateUUID(){
+    var d = new Date().getTime();
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = (d + Math.random()*16)%16 | 0;
+        d = Math.floor(d/16);
+        return (c==='x' ? r : (r&0x3|0x8)).toString(16);
+    });
+    return uuid;
+}
+
 var testedEventUrls = ['/events/0', '/events/1', '/events/2'];
 
 function setSite (testBlock) {
@@ -240,14 +251,16 @@ describe('The event detail pages',function(){
 
   it('should allow Yale users to RSVP', function(done){
     var browser = new Browser();
-    var email = 'foobar@YAle.edu';
+    var email = 'duder-' + generateUUID() +'@YAle.edu';
 
     browser.visit(SITE + '/events/0', function(){
-      assert.ok(browser.html().indexOf(email) === -1, 'Email ' + email + ' found before filling form at /events/0.');
+      var foundEmail = browser.html().toLowerCase().indexOf(email.toLowerCase()) > -1;
+      assert.ok(!foundEmail, 'Email ' + email + ' found before filling form at /events/0.');
       browser
         .fill('email', email)
         .pressButton('Submit', function(){
-          assert.ok(browser.html().indexOf(email) > -1, 'Email ' + email + ' not successfully RSVP\'d.');
+          var foundEmail = browser.html().toLowerCase().indexOf(email.toLowerCase()) > -1;
+          assert.ok(foundEmail, 'Email ' + email + ' not successfully RSVP\'d.');
           done();
         });
     });
