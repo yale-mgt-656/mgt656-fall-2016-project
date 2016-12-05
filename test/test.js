@@ -316,9 +316,10 @@ describe('The new event creation page',function(){
         'hour' : _.range(24),
         'minute' : [0, 30]
       };
+      var dis = this;
 
       _.forOwn(requiredFieldValues, function (expectedOptionValues, fieldName) {
-          var select = this.browser.query('select[name="' + fieldName + '"]');
+          var select = dis.browser.query('select[name="' + fieldName + '"]');
           assert.ok(select, 'Should have select input for ' + fieldName);
           assert.deepEqual(
             _.map(select.getElementsByTagName('option'),
