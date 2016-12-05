@@ -160,7 +160,7 @@ describe('The home page',function(){
 describe('The API',function(){
   before(function(done){
     this.server = app.listen(PORT, done);
-    this.url = 'http://' + HOST + ':' + PORT + '/api/events';
+    this.url = SITE + '/api/events';
 
   });
 
