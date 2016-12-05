@@ -324,7 +324,7 @@ describe('The new event creation page',function(){
 
   it('should have the appropriate options for select elements', function () {
       var requiredFieldValues = {
-        'year' : [2016, 2017],
+        // 'year' : [2016, 2017],
         'month' : _.range(12),
         'hour' : _.range(24),
         'minute' : [0, 30]
@@ -434,7 +434,7 @@ describe('The form for creating new events',function(){
   var rangedIntCases = [
     {
       field: 'year',
-      min: 2016,
+      min: 2015,
       max: 2017
     },
     {
