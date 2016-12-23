@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block mainContent %}
+  <div><h1>{{event.title}}</h1></div>
+  <div><span>Date: {{event.date}}</span></div>
+  <div><span>Location: {{event.location}}</span></div>
+  <div>Attendees: {{event.attending}}</div>
+  <div><img src={{event.image}}></img></div>
+  
+{% endblock %}

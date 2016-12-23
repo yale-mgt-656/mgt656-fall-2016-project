@@ -3,6 +3,7 @@
   <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' />
   </head>
 
 	<body class="container">
@@ -16,7 +17,10 @@
     {% endblock %}
 
     {% block footer %}
-      <footer>This be the footer.</footer>
+      <footer>
+      <a href="/">Home</a> &gt; <a href="/about">About Us</a>
+       <img src="https://media.licdn.com/media/AAEAAQAAAAAAAAZTAAAAJGQ4ODNjMGRkLWM1MjgtNDNjZS1iNmI1LWQ1YjdlNjBlOTUzZg.png" id="logo"></img>
+      </footer>
     {% endblock %}
 
   </body>
